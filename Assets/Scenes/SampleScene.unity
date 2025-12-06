@@ -4838,7 +4838,7 @@ GameObject:
   - component: {fileID: 320593667}
   - component: {fileID: 320593668}
   - component: {fileID: 320593669}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GripperSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4920,10 +4920,10 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -4954,7 +4954,7 @@ MonoBehaviour:
   sphereMaterial: {fileID: 2100000, guid: ca6662d7c5f1bdae18a327ff307e4ccc, type: 2}
   transparentAlpha: 0.4
   opaqueAlpha: 1
-  handGrabInteractable: {fileID: 0}
+  handGrabInteractable: {fileID: 1749712415}
   baseColor: {r: 0.21568628, g: 0.21568628, b: 0.21568628, a: 0}
   meshRenderer: {fileID: 320593664}
 --- !u!54 &320593668
@@ -4973,10 +4973,10 @@ Rigidbody:
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
@@ -41068,8 +41068,8 @@ MonoBehaviour:
   _maxInteractors: -1
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
-  _pointableElement: {fileID: 0}
-  _rigidbody: {fileID: 0}
+  _pointableElement: {fileID: 320593669}
+  _rigidbody: {fileID: 320593668}
   _physicsGrabbable: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
   _scoringModifier:
@@ -41110,7 +41110,7 @@ MonoBehaviour:
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
   _pointableElement: {fileID: 0}
-  _rigidbody: {fileID: 0}
+  _rigidbody: {fileID: 320593668}
   _grabSource: {fileID: 0}
   _useClosestPointAsGrabSource: 0
   _releaseDistance: 0
