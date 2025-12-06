@@ -1,0 +1,85 @@
+# LeRobot Training Configuration Example
+# ========================================
+# Copy this file to train_config.yaml and modify as needed
+# Usage: python standalone_train.py --config train_config.yaml
+
+# Dataset configuration
+dataset_repo_id: "lerobot/svla_so101_pickplace"  # HuggingFace dataset repository ID
+
+# Policy configuration
+policy_type: "smolvla"  # Options: smolvla, act, pi0, tdmpc, diffusion
+
+# Optional: Use a pretrained checkpoint (remove or comment out to train from scratch)
+# pretrained_path: "lerobot/smolvla_base"
+
+# Output configuration
+output_dir: "outputs/train/my_model"  # Where to save checkpoints
+
+# Training hyperparameters
+training_steps: 20000    # Number of training steps
+batch_size: 8            # Training batch size (adjust based on GPU memory)
+save_freq: 1000          # Save checkpoint every N steps
+seed: 1000               # Random seed for reproducibility
+
+# HuggingFace Hub (optional)
+push_to_hub: false       # Set to true to push trained model to HuggingFace Hub
+# policy_repo_id: "username/my-smolvla-model"  # Required if push_to_hub is true
+
+# Weights & Biases logging (optional)
+use_wandb: false         # Set to true to enable WandB logging
+# wandb_project: "lerobot-training"  # WandB project name
+
+# Advanced: Rename dataset observation keys (optional)
+# This is useful if your dataset has different camera names
+# rename_map:
+#   "observation.images.side": "observation.images.camera1"
+#   "observation.images.up": "observation.images.camera2"
+
+# ========================================
+# Environment Variables (optional)
+# ========================================
+# Set these in your shell or cluster job script:
+#
+# HF_TOKEN: Your HuggingFace API token (for private datasets or pushing models)
+# WANDB_API_KEY: Your Weights & Biases API key (for logging)
+#
+# Example:
+#   export HF_TOKEN="hf_xxxxxxxxxxxxx"
+#   export WANDB_API_KEY="xxxxxxxxxxxxx"
+
+# ========================================
+# Quick Configuration Examples
+# ========================================
+
+# Example 1: Train SmolVLA on public dataset
+# -------------------------------------------
+# dataset_repo_id: "lerobot/svla_so101_pickplace"
+# policy_type: "smolvla"
+# output_dir: "outputs/smolvla_pickplace"
+# training_steps: 20000
+# batch_size: 8
+
+# Example 2: Train Diffusion Policy with WandB logging
+# -----------------------------------------------------
+# dataset_repo_id: "lerobot/aloha_sim_insertion_human"
+# policy_type: "diffusion"
+# output_dir: "outputs/diffusion_insertion"
+# training_steps: 50000
+# batch_size: 16
+# use_wandb: true
+# wandb_project: "my-robot-training"
+
+# Example 3: Train ACT and push to Hub
+# -------------------------------------
+# dataset_repo_id: "lerobot/aloha_sim_insertion_human"
+# policy_type: "act"
+# output_dir: "outputs/act_insertion"
+# training_steps: 30000
+# batch_size: 8
+# push_to_hub: true
+# policy_repo_id: "myusername/act-insertion-model"
+
+# Example 4: Resume training from checkpoint
+# -------------------------------------------
+# Use the same config as before, then run:
+#   python standalone_train.py --config train_config.yaml --resume
