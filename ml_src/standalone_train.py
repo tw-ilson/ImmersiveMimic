@@ -171,7 +171,7 @@ def get_policy_config(policy_type: str, pretrained_path: Optional[str] = None):
 
 
 def handle_output_directory(output_dir: str, resume: bool = False):
-    """Handle output directory creation and conflicts"""
+    """Handle output directory validation and conflicts"""
     output_path = Path(output_dir)
 
     if output_path.exists() and output_path.is_dir():
@@ -186,10 +186,7 @@ def handle_output_directory(output_dir: str, resume: bool = False):
             print("💡 Use --resume to continue training or --force to overwrite")
             sys.exit(1)
 
-    if not resume:
-        output_path.mkdir(parents=True, exist_ok=True)
-        print(f"✅ Created output directory: {output_dir}")
-
+    # Don't create the directory - let LeRobot create it to avoid conflicts
     return output_path, resume
 
 
