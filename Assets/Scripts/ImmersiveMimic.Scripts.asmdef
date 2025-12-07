@@ -1,0 +1,17 @@
+{
+    "name": "ImmersiveMimic.Scripts",
+    "rootNamespace": "",
+    "references": [
+        "Unity.Robotics.UrdfImporter",
+        "Oculus.Interaction"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
