@@ -40204,7 +40204,7 @@ Transform:
   m_GameObject: {fileID: 1622617572}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5973, y: 0.74684, z: -0.053}
+  m_LocalPosition: {x: -0.5693, y: 0.5346, z: -0.053}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -40752,7 +40752,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -40814,7 +40814,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -40827,7 +40827,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705839806}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4aa23473ea3ac77ffa7e3258b7b59951, type: 3}
   m_Name: 
@@ -41439,7 +41439,6 @@ GameObject:
   - component: {fileID: 1920031248}
   - component: {fileID: 1920031247}
   - component: {fileID: 1920031246}
-  - component: {fileID: 1920031250}
   m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
@@ -41534,25 +41533,12 @@ Transform:
   m_GameObject: {fileID: 1920031245}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.528, y: 0.464, z: -0.02782}
+  m_LocalPosition: {x: -0.5, y: 0.25176, z: -0.02782}
   m_LocalScale: {x: 0.58521, y: 0.56374055, z: 0.49103}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1920031250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920031245}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aa23473ea3ac77ffa7e3258b7b59951, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HandCollisionVisibilityToggle
-  visualSphereMeshRenderer: {fileID: 1920031247}
 --- !u!1001 &1929108974
 PrefabInstance:
   m_ObjectHideFlags: 0
