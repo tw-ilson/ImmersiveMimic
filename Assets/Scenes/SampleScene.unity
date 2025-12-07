@@ -4851,7 +4851,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.9e-14, y: -0.00000047342, z: 0}
-  m_LocalScale: {x: 0.9572098, y: 0.9572098, z: 0.9572098}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1705839813}
@@ -40150,6 +40150,7 @@ GameObject:
   - component: {fileID: 1622617573}
   - component: {fileID: 1622617576}
   - component: {fileID: 1622617577}
+  - component: {fileID: 1622617578}
   m_Layer: 0
   m_Name: so101
   m_TagString: robot
@@ -40265,6 +40266,23 @@ MonoBehaviour:
   damping: 500
   forceLimit: 1000
   jointAngles: []
+--- !u!114 &1622617578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622617572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8268c87824b85f908375464ad389b69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ImmersiveMimic.Scripts::JointAngleServer
+  targetIP: 192.168.40.209
+  targetPort: 57283
+  sendInterval: 0.05
+  sendAsJSON: 1
+  ikSolver: {fileID: 0}
 --- !u!1001 &1636572261
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -100,7 +100,14 @@ public class SO101_IK : MonoBehaviour
                     joint.jointFriction = 10f;
                     joint.angularDamping = 10f;
 
-                    Debug.Log($"Joint {c++} configured: {joint.name} - Stiffness={stiffness}, Damping={damping}, ForceLimit={forceLimit}");
+                    // Log initial position
+                    float initialPositionRad = joint.jointPosition[0];
+                    float initialPositionDeg = initialPositionRad * Mathf.Rad2Deg;
+                    float initialTarget = drive.target;
+
+                    Debug.Log($"Joint {c} configured: {joint.name} - Stiffness={stiffness}, Damping={damping}, ForceLimit={forceLimit}");
+                    Debug.Log($"Joint {c} initial state: Position={initialPositionDeg:F2}° ({initialPositionRad:F4}rad), Target={initialTarget:F2}°, Limits=[{drive.lowerLimit:F2}°, {drive.upperLimit:F2}°]");
+                    c++;
                 }
             }
         }
@@ -182,7 +189,7 @@ public class SO101_IK : MonoBehaviour
                 }
 
                 // Log current position, old target, and new target
-                Debug.Log($"Joint {i} ({joint.name}): ActualPos={currentPositionDeg:F2}° (raw={currentPositionRad:F4}rad), OldTarget={currentTargetDeg:F2}°, NewTarget={clampedTarget:F2}°");
+                // Debug.Log($"Joint {i} ({joint.name}): ActualPos={currentPositionDeg:F2}° (raw={currentPositionRad:F4}rad), OldTarget={currentTargetDeg:F2}°, NewTarget={clampedTarget:F2}°");
 
                 drive.target = clampedTarget;
                 joint.xDrive = drive;
