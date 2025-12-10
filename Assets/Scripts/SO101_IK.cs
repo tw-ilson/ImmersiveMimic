@@ -182,7 +182,6 @@ public class SO101_IK : MonoBehaviour
 
                 // Clamp target to joint limits
                 float clampedTarget = Mathf.Clamp(jointAngles[i], drive.lowerLimit, drive.upperLimit);
-
                 if (clampedTarget != jointAngles[i])
                 {
                     Debug.LogWarning($"Joint {i} ({joint.name}) target {jointAngles[i]} clamped to [{drive.lowerLimit}, {drive.upperLimit}]");
